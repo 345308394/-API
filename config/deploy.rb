@@ -72,7 +72,7 @@ namespace :deploy do
   task :update_crontab do
     on roles(:web) do
       within release_path do
-        execute :bundle, "exec whenever -w"
+        # execute :bundle, "exec whenever -w"
       end
     end
   end
