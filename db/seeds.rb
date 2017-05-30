@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Wzx.delete_all
+Wzx.create! name: "曲阜师范大学", information: "软件学院", food: "麻辣烫", tuijian: "西联教室", pt: [2.0, 3.0]
+Wzx.create! name: "曲阜师范大学", information: "文学院", food: "麻辣烫", tuijian: "大学生活动中心", pt: [25.0, 31.0]
