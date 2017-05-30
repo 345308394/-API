@@ -1,0 +1,2 @@
+class Wzx < ApplicationRecord
+end

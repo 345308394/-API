@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wzxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Information</th>
+      <th>Food</th>
+      <th>Tuijian</th>
+      <th>Pt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wzxes.each do |wzx| %>
+      <tr>
+        <td><%= wzx.name %></td>
+        <td><%= wzx.information %></td>
+        <td><%= wzx.food %></td>
+        <td><%= wzx.tuijian %></td>
+        <td><%= wzx.pt %></td>
+        <td><%= link_to 'Show', wzx %></td>
+        <td><%= link_to 'Edit', edit_wzx_path(wzx) %></td>
+        <td><%= link_to 'Destroy', wzx, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wzx', new_wzx_path %>

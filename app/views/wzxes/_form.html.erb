@@ -1,0 +1,41 @@
+<%= form_with(model: wzx, local: true) do |form| %>
+  <% if wzx.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wzx.errors.count, "error") %> prohibited this wzx from being saved:</h2>
+
+      <ul>
+      <% wzx.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :wzx_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :information %>
+    <%= form.text_field :information, id: :wzx_information %>
+  </div>
+
+  <div class="field">
+    <%= form.label :food %>
+    <%= form.text_field :food, id: :wzx_food %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuijian %>
+    <%= form.text_field :tuijian, id: :wzx_tuijian %>
+  </div>
+  <div class="field">
+    <%= form.label :pt %>
+    <%= form.text_field :pt, id: :wzx_pt %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
