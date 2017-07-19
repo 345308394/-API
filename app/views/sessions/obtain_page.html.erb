@@ -1,0 +1,21 @@
+<h1>取回密码</h1>
+ 
+<% if flash[:login_error] %>
+  <p><%= flash[:login_error] %></p>
+<% end %>
+ 
+<%= form_for :session, url: :sessions_obtain do |f| %>
+ 
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :key %>
+    <%= f.password_field :key %>
+  </p>
+ 
+  <p><%= f.button "取回密码" %></p>
+ 
+<% end %>
