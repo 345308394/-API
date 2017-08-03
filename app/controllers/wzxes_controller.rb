@@ -8,7 +8,7 @@ class WzxesController < ApplicationController
   y = params[:y]
   # distance =params[:distance]
   #{distance}
-  data = Wzx.where("pt<->point'(#{x},#{y})'<0.01").order("pt<->point'(#{x},#{y})'")
+  data = Wzx.where("pt<->point'(#{x},#{y})'<5").order("pt<->point'(#{x},#{y})'")
     # data1 =(id: data_id)
   render json:data
    
