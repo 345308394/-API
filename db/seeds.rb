@@ -16,3 +16,4 @@ Wzx.create! name: "三孔　", information: "山东曲阜的孔府、孔庙、�
 孔林，亦称“至圣林”，是孔子及其家族的专用墓地，也是世界上延续时间最长的家族墓地，林墙周长7千米，内有古树2万多株，是一处古老的人造园林", food: "煎饼", tuijian: "孔子墓", pt: [116.99, 35.60]
 Wzx.create! name: "核桃园镇", information: "小金山", food: "小饼", tuijian: "小金山", pt: [116.179, 35.277]
 Wzx.create! name: "独山镇", information: "金山", food: "饼", tuijian: "金山", pt: [116.236, 35.248]
+Wzx.create! name: "泗水县", information: "泗水县", food: "泗水县", tuijian: "泗水县", pt: [117.251, 35.664]
