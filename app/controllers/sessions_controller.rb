@@ -4,8 +4,10 @@ class SessionsController < ApplicationController
  
  def create
 
-  user = User.find_by(name: user_params[:name]).try(:authenticate, user_params[:password])
-  if user
+  user = User.find_by(name: user_params[:name])
+  pp = user_params[:password_confirm]
+
+  if (user.password_confirm == pp)
 
    render json: {login_success:'yes'}
   else
