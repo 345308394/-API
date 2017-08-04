@@ -1,21 +1,72 @@
-<h1>取回密码</h1>
- 
-<% if flash[:login_error] %>
-  <p><%= flash[:login_error] %></p>
-<% end %>
- 
-<%= form_for :session, url: :sessions_obtain do |f| %>
- 
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :key %>
-    <%= f.password_field :key %>
-  </p>
- 
-  <p><%= f.button "取回密码" %></p>
- 
-<% end %>
+
+<HTML>
+<HEAD>
+<TITLE>注册</TITLE>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<style type="text/css">
+<!--
+body {
+    background:url(../img/login_bg_0.jpg) #f8f6e9;
+}
+.mycenter{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width:500px;
+    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.mycenter mysign{
+    width: 440px;
+}
+.mycenter input,checkbox,button{
+    margin-top:2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.mycheckbox{
+    margin-top:10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    height: 10px;
+}-->
+</style>
+</HEAD>
+<body>
+        <%= form_for :session, url: :sessions_obtain do |f| %>
+            <div class="mycenter">
+            <div class="mysign">
+                <div class="col-xs-9 text-center text-info">
+                    <h2>取回密码</h2>
+                </div>
+                <div class="col-xs-10"></div>
+                <div class="col-xs-10">
+                <p>
+                   用户名 </p>
+                   <p>
+                    <%= f.text_field :name %>
+                    </p>
+                    </div>
+                <div class="col-xs-10"></div>
+               
+                <div class="col-xs-10">
+                <p>
+                   取密钥匙</p>
+                   <p>
+                    <%= f.text_field :key %>
+                    </p>
+                    </div>
+                <div class="col-xs-7">             
+                <button class="btn btn-success col-xs-12" ;>取回密码</button>
+            </div>
+        </div>
+
+        <% end %>
+    </body>
+
+</HTML>

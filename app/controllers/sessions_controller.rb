@@ -20,10 +20,12 @@ class SessionsController < ApplicationController
    user = User.find_by(name: user_params[:name])
    keykey = user_params[:key]
   if (user.key == keykey) 
+    # redirect_to '/sessions/obtainsuccess'
      
-   render json: {obtain_success:'yes',mima:user.password_confirm }
+    render json: {obtain_success:'yes',mima:user.password_confirm }
   else
-   render json: {obtain_success:'no'}
+     redirect_to '/sessions/obtainerror1'
+   # render json: {obtain_success:'no'}
   end
  end
  

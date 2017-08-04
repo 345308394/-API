@@ -4,14 +4,19 @@
  end
 
  def create
-  
-  if
-   user = User.find_by(name: user_params[:name])
-   render json: {register:'Alread_exits_name'}
-  else
+  if (user_params[:name] == ''  || user_params[:password] == '' || user_params[:password_confirm] == '' || user_params[:key] == '')
+    redirect_to '/users/registererror0'
+  elsif (user_params[:password] != user_params[:password_confirm])
+   redirect_to '/users/registererror1'
+ elsif 
+  user = User.find_by(name: user_params[:name])
+   # render json: {register:'Alread_exits_name'}
+   redirect_to '/users/registererror2'
+ elsif     
    @user = User.create(user_params)
    @user.save
-   render json: {register_success:'yes'}
+   # render json: {register_success:'yes'}
+  
   end
 end
 

@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
+
   # get '/userslogin' => 'sessions#create'
   post '/sessions/create' => '/sessions/create'
 
   get 'sessions/obtain_page'
+  get 'sessions/obtainsuccess'
+  get 'sessions/obtainerror1'
 
   post  'sessions/obtain'
   # post '/sessions/obtain' => '/sessions/obtain'
 
   get 'users/new'
+  get 'users/registererror0'
+  get 'users/registererror1'
+  get 'users/registererror2'
 
   # post  'users/create'
   post '/users/create' => 'users#create'
