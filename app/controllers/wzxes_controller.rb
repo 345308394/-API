@@ -1,3 +1,4 @@
+
 class WzxesController < ApplicationController
   before_action :set_wzx, only: [:show, :edit, :update, :destroy]
 

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
-
+  get '/create1' => 'sessions#create1'
+  
   # get '/userslogin' => 'sessions#create'
-  post '/sessions/create' => '/sessions/create'
+  # post '/sessions/create' => '/sessions/create'
 
   get 'sessions/obtain_page'
   get 'sessions/obtainsuccess'
