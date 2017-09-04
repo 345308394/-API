@@ -3,21 +3,22 @@
   @user = User.new
  end
 
- def create
+ def create 
   if (user_params[:name] == ''  || user_params[:password] == '' || user_params[:password_confirm] == '' || user_params[:key] == '')
-    render js: "alert('您输入的信息不完全');"
-  elsif (user_params[:password] != user_params[:password_confirm])
-  render js: "alert('两次输入的密码不相同');"
+    render html: "<h1><strong>您输入的信息不完全</strong></h1>".html_safe
+    
+  elsif (user_params[:password] != user_params[:password_confirm]) 
+  render html: "<h1><strong>两次输入的密码不相同</strong></h1>".html_safe
  elsif 
   user = User.find_by(name: user_params[:name])
    # render json: {register:'Alread_exits_name'}
-   #render html: "<strong>该用户名已经存在</strong>".html_safe
-    render js: "alert('该用户名已经存在');"
+   render html: "<h1><strong>该用户名已经存在</strong></h1>".html_safe
+  
  elsif     
    @user = User.create(user_params)
    @user.save
    # render json: {register_success:'yes'}
-   render js: "alert('注册成功');"
+  
   end
 end
 
