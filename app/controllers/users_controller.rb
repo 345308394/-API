@@ -17,6 +17,7 @@
  elsif     
    @user = User.create(user_params)
    @user.save
+   
    # render json: {register_success:'yes'}
   
   end

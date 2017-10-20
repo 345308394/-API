@@ -26,9 +26,10 @@ class SessionsController < ApplicationController
     # redirect_to '/sessions/obtainsuccess'
      
     render json: {密码:user.password_confirm }
-  else
+  elsif (user.name)
      render html: "<h1><strong>您的取密钥匙不正确</strong></h1>".html_safe
    # render json: {obtain_success:'no'}
+  
   end
  end
  

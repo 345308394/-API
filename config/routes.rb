@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'users/registererror1'
   get 'users/registererror2'
 
+
   # post  'users/create'
   post '/users/create' => 'users#create'
 
