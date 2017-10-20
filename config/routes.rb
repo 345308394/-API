@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'users/registererror0'
   get 'users/registererror1'
   get 'users/registererror2'
+  get '' => 'users#guide'
 
 
   # post  'users/create'

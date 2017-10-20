@@ -26,6 +26,9 @@ end
 def index
   @users = User.all
   end 
+def guide
+  
+end
  private
   def user_params
    params.require(:user).permit(:name, :password, :password_confirm,:key)
