@@ -1,24 +1,17 @@
-# README
+此api核心函数
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+def find
 
-Things you may want to cover:
+  x = params[:x]
 
-* Ruby version
+  y = params[:y]
 
-* System dependencies
+  # distance =params[:distance]
 
-* Configuration
+  #{distance}
 
-* Database creation
+  data = Wzx.where("pt<->point'(#{x},#{y})'<5").order("pt<->point'(#{x},#{y})'").first
 
-* Database initialization
+   # data1 =(id: data_id)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  render json:data
